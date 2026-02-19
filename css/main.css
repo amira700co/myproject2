@@ -1,0 +1,122 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    /* تمنع البوردر والبادنق من التاثير في العرض والطول*/
+
+}
+
+
+
+.header {
+
+    display: flex;
+    /*gap: 232.5px;  مسافه بين العناصر بديل افضل لها جستفاي كونتنت  سبيس بتويتن  */
+    justify-content: space-between;
+    margin: 0 165px;
+    /*   موقته للمسافات ع يمين ويسار ليست افضل حل  الافضل منها مارجن اوتو ويدث داخل كونتينر ثم رو */
+    padding: 21.84px 0;
+    /* مسافه بين السكاشن , مسافه عليا وسفلى*/
+    align-items: center;
+    /*  خاصية  لتوسيط العنصر طوليا بمحاذاه واحده بحيث العناصر فوق وتحت متساويين مو واحد فوق واحد تحت  بين العناصروهي تابعه لفلكس حيث تخلي المسافه عاموديا متساويه*/
+
+background-color:rgb(245, 242, 241) ;
+
+
+
+
+}
+
+.menu-items {
+
+    display: flex;
+    gap: 60px;
+    list-style-type: none;
+
+
+
+}
+
+.icon-items {
+
+    display: flex;
+    list-style-type: none;
+    gap: 24px;
+
+}
+
+.menu-items a {
+
+    text-decoration: none;
+
+}
+
+.icon-items a {
+
+    text-decoration: none;
+
+}
+
+
+.container {
+
+    /*
+    مسافات يمين ويسار 
+width: 1200px;
+margin: 0 auto; or  justify-content: space-around
+background-color: rgb(42, 165, 124);
+
+*/
+}
+
+.row {
+    /*
+اذا كانت العناصر جنب بعض  يصير هو الاب بدال هيدر لجميع العناصر
+*/
+}
+
+.collection-cards {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 165px;
+    /*   موقته للمسافات ع يمين ويسار ليست افضل حل  الافضل منها مارجن اوتو ويدث داخل كونتينر ثم رو 
+
+    /*
+
+    فلكس راب بسبب انه قاب 30 وودث كارد 25 فصارت وحده لازم تنزل تحت 
+    الاساسي فلكس راب نو راب لكن لازم نحط راب عشان الريسبونسف لانواع الشاشات
+    وعشان نحل هذه الاشكاليه نستخدم كال بدلا من ويدث
+    بحيث لاينزل تحت ويكةن مرن 
+
+    */
+}
+
+.card {
+
+    /* width: 25%; */
+    width: calc((100% - 90px) /4);
+    /* يحل مشكله انه ينزل تحت بس لازم نخليه راب بسبب الريسبونسف*/
+
+
+
+
+}
+
+.card img {
+
+    width: 100%;
+
+
+}
+
+h2 {
+
+    margin-top: 23px;
+}
