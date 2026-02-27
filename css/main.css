@@ -8,22 +8,19 @@
 }
 
 
+:root{
+
+
+   --prim_color: #192110;
+   --prim_font:"Inter", sans-serif;
+
+
+}
 
 .header {
 
-    display: flex;
-    /*gap: 232.5px;  مسافه بين العناصر بديل افضل لها جستفاي كونتنت  سبيس بتويتن  */
-    justify-content: space-between;
-    margin: 0 165px;
-    /*   موقته للمسافات ع يمين ويسار ليست افضل حل  الافضل منها مارجن اوتو ويدث داخل كونتينر ثم رو */
     padding: 21.84px 0;
-    /* مسافه بين السكاشن , مسافه عليا وسفلى*/
-    align-items: center;
-    /*  خاصية  لتوسيط العنصر طوليا بمحاذاه واحده بحيث العناصر فوق وتحت متساويين مو واحد فوق واحد تحت  بين العناصروهي تابعه لفلكس حيث تخلي المسافه عاموديا متساويه*/
-
-background-color:rgb(245, 242, 241) ;
-
-
+    /*  فقط , مسافه عليا وسفلى*/
 
 
 }
@@ -31,8 +28,9 @@ background-color:rgb(245, 242, 241) ;
 .menu-items {
 
     display: flex;
-    gap: 60px;
+    gap: 30px;
     list-style-type: none;
+
 
 
 
@@ -46,46 +44,69 @@ background-color:rgb(245, 242, 241) ;
 
 }
 
-.menu-items a {
+a {
 
     text-decoration: none;
+    font: var(--prim_font);
+    /*font-family: "Inter", sans-serif;      بدون فاريل */ 
+    font-size: 14px;
+    color: var(--prim_color)
+
 
 }
 
-.icon-items a {
-
-    text-decoration: none;
-
-}
 
 
 .container {
 
-    /*
-    مسافات يمين ويسار 
-width: 1200px;
-margin: 0 auto; or  justify-content: space-around
-background-color: rgb(42, 165, 124);
 
-*/
+    width: calc(100% - 330px);
+    /* مقاسات الكونتينر المسافه المتوسطة*/
+    margin: 0 auto;
+    /*   مسافات يمين ويسار  للتوسيط*/
+
+    /*  justify-content: center     لانستخدم جست فاس كونتنت سنتر لانها تؤثر على الابناء ونحن نريد ان التاثير يكون على العنصر نفسه لذلك مارجن*/
+
 }
 
 .row {
+
     /*
-اذا كانت العناصر جنب بعض  يصير هو الاب بدال هيدر لجميع العناصر
+اذا كانت العناصر جنب بعض  يصير هو الاب بدال أي اب وفيه توضع اللاتربيوس للابناء للمسافات وفلكس وغيرها  لجميع العناصر
 */
+
+    display: flex;
+    /*gap: 232.5px;  مسافه بين العناصر بديل افضل لها جستفاي كونتنت  سبيس بتويتن  */
+    justify-content: space-between;
+    /* مسافه بين السكاشن , مسافه عليا وسفلى*/
+    align-items: center;
+    /*  خاصية  لتوسيط العنصر طوليا بمحاذاه واحده بحيث العناصر فوق وتحت متساويين مو واحد فوق واحد تحت  بين العناصروهي تابعه لفلكس حيث تخلي المسافه عاموديا متساويه*/
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hero{
+
+background-color: antiquewhite;
+height: 400px;
+display: flex;
+flex-direction: column;     /*  لأني لا اريد ان تاتي العناصر بجانب بعضها البعض ارجعها عمودي وهذا ياثر على  الجستفاي تنعكس تصير عمودي والايتم تصير عضي والقاب عمودي*/
+justify-content: center;
+align-items: center;
+gap: 10px;
+
+
 }
 
 .collection-cards {
 
-    display: flex;
-    flex-wrap: wrap;
+    justify-content:flex-start ;   /* ايقاف خاصية جستفاي اللي ف الاب لوضع قاب */
     gap: 30px;
-    text-align: center;
-    background-color: rgb(240, 240, 240);
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 0 165px;
+
     /*   موقته للمسافات ع يمين ويسار ليست افضل حل  الافضل منها مارجن اوتو ويدث داخل كونتينر ثم رو 
 
     /*
@@ -115,8 +136,9 @@ background-color: rgb(42, 165, 124);
 
 
 }
-
 h2 {
 
     margin-top: 23px;
+    text-transform: capitalize;
+    color: var(--prim_color)
 }
