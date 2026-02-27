@@ -24,7 +24,11 @@
 
 
 }
+.menuicon{
 
+display: none ;
+
+}
 .menu-items {
 
     display: flex;
@@ -81,7 +85,7 @@ a {
     /* مسافه بين السكاشن , مسافه عليا وسفلى*/
     align-items: center;
     /*  خاصية  لتوسيط العنصر طوليا بمحاذاه واحده بحيث العناصر فوق وتحت متساويين مو واحد فوق واحد تحت  بين العناصروهي تابعه لفلكس حيث تخلي المسافه عاموديا متساويه*/
-    flex-wrap: wrap;
+     flex-wrap: wrap;
     align-items: center;
     text-align: center;
 }
@@ -99,6 +103,26 @@ gap: 10px;
 
 
 }
+
+@media screen and (min-width:0) and (max-width:850px) {
+    
+.menu-items{
+
+display: none;
+
+}
+
+.icon-items {
+
+display: none;
+}
+
+.menuicon{
+    display: flex;  /*او دزبلي بلوك*/
+
+}
+}
+
 
 .collection-cards {
 
@@ -130,12 +154,66 @@ gap: 10px;
 
 }
 
+
 .card img {
 
     width: 100%;
 
 
 }
+
+
+@media screen and (min-width:0) and (max-width:660px) {
+ 
+    .collection-cards .row{
+
+
+
+        flex-direction: column   
+  /* يجعلها عمودية*/
+    }
+
+
+
+    .card{
+
+
+       width: 100%;
+
+         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+    }
+
+
+
+}
+
+
+
+@media screen and (min-width:661px) and (max-width:770px) {
+
+    .card{
+
+      width: calc((100% -  30px) / 2);
+
+       /*يخلي صوتين ع الحجم تتناسب نغير العرض للكارد*/
+    }
+   
+
+
+}
+
+
+
+@media screen and (min-width:771px) and (max-width:1050px) {
+
+    .card{
+
+      width: calc((100% -  60px) / 3);
+    }
+
+     /*يخلي 3 صور واحده فقط ع حجم الجواب تتناسب نغير العرض للكارد*/
+}
+
 h2 {
 
     margin-top: 23px;
