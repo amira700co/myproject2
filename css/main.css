@@ -202,7 +202,7 @@ display: none;
 
 
 
-@media screen and (min-width:661px) and (max-width:770px) {
+@media screen and (min-width:660px) and (max-width:800px) {
 
     .card{
 
@@ -217,7 +217,7 @@ display: none;
 
 
 
-@media screen and (min-width:771px) and (max-width:1050px) {
+@media screen and (min-width:800px) and (max-width:1050px) {
 
     .card{
 
@@ -321,3 +321,91 @@ width: 100px;
 
 
 
+
+
+
+@media screen and (min-width:0) and (max-width:660px) {
+ 
+
+
+    .bestsellre .items{
+
+
+       width: 100%;
+
+         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+
+
+}
+
+
+
+.container {
+  width: calc(100% - 100px);
+}
+
+
+
+
+    }
+
+@media screen and (min-width:0) and (max-width:660px) {
+ 
+
+
+    .bestsellre .items{
+
+
+       width: 100%;
+
+         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+
+
+}
+
+
+
+
+    }
+
+@media screen and (min-width:661px) and (max-width:800px) {
+ 
+
+
+    .bestsellre .items{
+
+
+       width: calc((100% -  60px) / 3);
+
+         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width:801px) and (max-width:1050px) {
+
+    .bestsellre .items{
+
+      width: calc((100% -  90px) / 4);
+
+       /*يخلي صوتين ع الحجم تتناسب نغير العرض للكارد*/
+    }
+   
+
+
+}
+
+
+
+
+
+
+
+
+
+ 
