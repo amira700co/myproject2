@@ -2,7 +2,7 @@
 
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     /* تمنع البوردر والبادنق من التاثير في العرض والطول*/
 
 }
@@ -253,13 +253,21 @@ gap: 30px;  /*  للتفريق بين العناصر اقدر احطها في ا
 }
 
 .bestsellre .items {
+   
+text-align: left;
+width: calc((100% - 90px) / 4);
 
-    width: calc((100% - 90px) / 4);
-    padding-bottom: 20px;
+}
+
+.item-imgs img{
+  width: 100%;
+
+ display: block;
+
 }
 
 .bestsellre .itemcontent {
-
+    
 margin-top: 24px;
 
 }
@@ -309,13 +317,13 @@ margin-bottom: 34px;
 }
 .bestsellre .addcard {
 
-padding: 15px 81px;
+padding: 20px 70px;
 background-color: #ffffff;
 border: 1px solid #000;
 letter-spacing: 4px;
 font-size: 10px ;
 font-weight: 600;   /* البايدفلت 400 للودث حق الخط*/
-width: 100px;
+width: 100%;
 
 }
 
@@ -323,40 +331,35 @@ width: 100px;
 
 
 
+ /*ميديا كويري للقسم الثاني*/
 
-@media screen and (min-width:0) and (max-width:660px) {
+@media screen and (min-width:0) and (max-width:450px) {
  
 
 
     .bestsellre .items{
-
-
-       width: 100%;
-
          /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
 
-
-}
-
-
+       width: 100%;
+    }
 
 .container {
+
   width: calc(100% - 100px);
 }
 
 
 
-
     }
 
-@media screen and (min-width:0) and (max-width:660px) {
+@media screen and (min-width:426px) and (max-width:800px) {
  
 
 
     .bestsellre .items{
 
 
-       width: 100%;
+       width: calc((100% -  30px) / 2);
 
          /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
 
@@ -364,47 +367,31 @@ width: 100px;
 }
 
 
+.container {
 
-
-    }
-
-@media screen and (min-width:661px) and (max-width:800px) {
- 
-
-
-    .bestsellre .items{
-
-
-       width: calc((100% -  60px) / 3);
-
-         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
-
-
+  width: calc(100% - 100px);
 }
 
 
 
+}
 
-
-
-@media screen and (min-width:801px) and (max-width:1050px) {
+@media screen and (min-width:850px) and (max-width:1050px) {
 
     .bestsellre .items{
 
-      width: calc((100% -  90px) / 4);
+      width: calc((100% -  60px) / 3);
 
-       /*يخلي صوتين ع الحجم تتناسب نغير العرض للكارد*/
+  
     }
-   
+  
+    .container {
 
-
+  width: calc(100% - 100px);
 }
 
 
-
-
-
-
+}
 
 
 
