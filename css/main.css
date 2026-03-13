@@ -239,7 +239,7 @@ h2 {
 .bestsellre {
 
 text-align: center;
-padding: 80px  0px;
+
 
 /* gap: 20px; */    /* تنفع هنا وينفع احدد الرو كمان */  
 }
@@ -352,7 +352,7 @@ width: 100%;
 
     }
 
-@media screen and (min-width:426px) and (max-width:800px) {
+@media screen and (min-width:451px) and (max-width:800px) {
  
 
 
@@ -376,7 +376,7 @@ width: 100%;
 
 }
 
-@media screen and (min-width:850px) and (max-width:1050px) {
+@media screen and (min-width:801px) and (max-width:1050px) {
 
     .bestsellre .items{
 
