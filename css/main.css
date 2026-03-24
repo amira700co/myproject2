@@ -8,39 +8,59 @@
 }
 
 
-:root{
+:root {
 
 
-   --prim_color: #192110;
-   --prim_font:"Inter", sans-serif;
+    --prim_color: #192110;
+    --prim_font: "Inter", sans-serif;
 
 
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 
- font-family: "EB Garamond", serif;
-/* خط موحد في العناوين الرئيسية*/
+    font-family: "EB Garamond", serif;
+    /* خط موحد في العناوين الرئيسية*/
 
 }
 
-body{
+body {
 
-/*   أكثر خط مكرر احطه في البدي .. كل الأبناء بياخذونها ماعدى اللي احنا نغيره */
+    /*   أكثر خط مكرر احطه في البدي .. كل الأبناء بياخذونها ماعدى اللي احنا نغيره */
     font-family: var(--prim_font);
 }
+
+.sitiing {
+
+    position: fixed;
+    top: 150px;
+    right: 0;
+    background-color: #70707a;
+}
+
 .header {
-
-    padding: 21.84px 0;
     /*  فقط , مسافه عليا وسفلى*/
-
+    padding: 10.84px 0;
+    /*   تثبيت العنصر ف مكانه مهما تحركت ف الصفحة  ولازم اسوي ويدث 100 لانه يخلي العنصر فيت كونتنت*/
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    z-index: 9; /* يخلي البوزشن يجي فوق كل البوزشنات المختلفه الرقم الاكبر*/
 
 }
-.menuicon{
 
-display: none ;
+.menuicon {
+
+    display: none;
 
 }
+
 .menu-items {
 
     display: flex;
@@ -60,23 +80,54 @@ display: none ;
 
 }
 
+
+.icon-items .Shopping-ico a {
+
+position: relative;
+
+}
+
+.icon-items .Shopping-ico a::after{    /*افتر+معها كونتنت*/
+
+content: '3';
+color: rgb(254, 239, 239);
+position: absolute;
+top: -23px;
+right: 3px;
+display: flex;/* للتوسيط*/
+align-items: center;/* للتوسيط*/
+justify-content: center;/* للتوسيط*/
+background-color: red;
+width: 15px;
+height: 15px;
+border-top-left-radius: 10px; /* حدود المربع*/
+border-bottom-right-radius:10px ;/* حدود المربع*/
+border-radius: 50%;/*دايره دايم   50% والويدث والهاي لازم قد بعض لو دايره*/
+
+}
+
 .header a {
 
     text-decoration: none;
     font: var(--prim_font);
-    /*font-family: "Inter", sans-serif;      بدون فاريل */ 
+    /*font-family: "Inter", sans-serif;      بدون فاريل */
     font-size: 14px;
     color: var(--prim_color)
-
-
 }
 
+
+
+.header a:hover {
+
+    color: blue;
+
+}
 
 
 .container {
 
 
-     width: calc(100% - 100px);
+    width: calc(100% - 330px);
     /* مقاسات الكونتينر المسافه المتوسطة*/
     margin: 0 auto;
     /*   مسافات يمين ويسار  للتوسيط*/
@@ -98,51 +149,91 @@ display: none ;
     /* مسافه بين السكاشن , مسافه عليا وسفلى*/
     align-items: center;
     /*  خاصية  لتوسيط العنصر طوليا بمحاذاه واحده بحيث العناصر فوق وتحت متساويين مو واحد فوق واحد تحت  بين العناصروهي تابعه لفلكس حيث تخلي المسافه عاموديا متساويه*/
-     
-   
+
+
 }
 
 
-.hero{
 
-background-color: antiquewhite;
-height: 400px;
-display: flex;
-flex-direction: column;     /*  لأني لا اريد ان تاتي العناصر بجانب بعضها البعض ارجعها عمودي وهذا ياثر على  الجستفاي تنعكس تصير عمودي والايتم تصير عضي والقاب عمودي*/
-justify-content: center;
-align-items: center;
-gap: 10px;
-flex-shrink: 0; /*لو صغرت الشاشه عشان ماتصغر العناصر فلكس شرنك 0 .. بايدفلت 1 */
+
+.hero {
+    background-image: url('../img/Slider.png');
+    background-size: cover;/*جعل صورة الباكقراوند خلفيه*/
+    background-repeat: no-repeat;/*عدم تكرتر صورة الباكقراوند*/
+    background-attachment: fixed;   /*تثبيت الباكرواتد ينزل الصولرة جزئييا*/
+    background-color: antiquewhite;
+    height: 600px;/*ارتفاع للشاشة احدده انا*/
+    height:100vh;/*ارتفاع للشاشه كامل على طولها*/
+    display: flex;
+    flex-direction: column;
+    /*  لأني لا اريد ان تاتي العناصر بجانب بعضها البعض ارجعها عمودي وهذا ياثر على  الجستفاي تنعكس تصير عمودي والايتم تصير عضي والقاب عمودي*/
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    /*لو صغرت الشاشه عشان ماتصغر العناصر فلكس شرنك 0 .. بايدفلت 1 */
+
+position: relative;
+
+
+
+
+}
+
+.pic{
+
+position: absolute;
+top: 50px;
+left:190px;
+bottom: 0;
+padding: 120px;
+color: aliceblue;
+
+background-color: rgba(85, 39, 39, 0.523);
+
+
+}
+
+.shopnow{
+margin-top: 250px;
+    padding: 15px 90px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+cursor: pointer;
+text-align: center;
 
 }
 
 @media screen and (min-width:0) and (max-width:850px) {
-    
-.menu{
 
-display: none;
+    .menu {
 
-}
+        display: none;
 
-.headerright {
+    }
 
-display: none;
-}
+    .headerright {
 
-.menuicon{
-    display: flex;  /*او دزبلي بلوك*/
+        display: none;
+    }
 
-}
+    .menuicon {
+        display: flex;
+        /*او دزبلي بلوك*/
+
+    }
 }
 
 
 .collection-cards {
+    display:flex;
 
-    justify-content:flex-start ;   /* ايقاف خاصية جستفاي اللي ف الاب لوضع قاب */
+    justify-content: flex-start;
+    /* ايقاف خاصية جستفاي اللي ف الاب لوضع قاب */
     gap: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
-     text-align: center;
+    text-align: center;
 
     /*   موقته للمسافات ع يمين ويسار ليست افضل حل  الافضل منها مارجن اوتو ويدث داخل كونتينر ثم رو 
 
@@ -161,7 +252,18 @@ display: none;
     /* width: 25%; */
     width: calc((100% - 90px) /4);
     /* يحل مشكله انه ينزل تحت بس لازم نخليه راب بسبب الريسبونسف*/
+position: relative;;
 
+
+
+}
+
+.card .sale {
+
+position: absolute;
+background-color: rgba(255, 0, 0, 0.418);
+top: 20px;
+padding: 5px;
 
 
 
@@ -171,29 +273,39 @@ display: none;
 .card img {
 
     width: 100%;
+    filter: grayscale(.7);
+    transition: filter .7S;
+    box-shadow:0 0 10px 4px #807f86;
+
+
+
+}
+
+.card img:hover {
+    filter: grayscale(0);
 
 
 }
 
 
 @media screen and (min-width:0) and (max-width:660px) {
- 
-    .collection-cards .row{
+
+    .collection-cards .row {
 
 
 
-        flex-direction: column   
-  /* يجعلها عمودية*/
+        flex-direction: column
+            /* يجعلها عمودية*/
     }
 
 
 
-    .card{
+    .card {
 
 
-       width: 100%;
+        width: 100%;
 
-         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+        /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
     }
 
 
@@ -204,13 +316,13 @@ display: none;
 
 @media screen and (min-width:660px) and (max-width:800px) {
 
-    .card{
+    .card {
 
-      width: calc((100% -  30px) / 2);
+        width: calc((100% - 30px) / 2);
 
-       /*يخلي صوتين ع الحجم تتناسب نغير العرض للكارد*/
+        /*يخلي صوتين ع الحجم تتناسب نغير العرض للكارد*/
     }
-   
+
 
 
 }
@@ -219,29 +331,35 @@ display: none;
 
 @media screen and (min-width:800px) and (max-width:1050px) {
 
-    .card{
+    .card {
 
-      width: calc((100% -  60px) / 3);
+        width: calc((100% - 60px) / 3);
     }
 
-     /*يخلي 3 صور واحده فقط ع حجم الجواب تتناسب نغير العرض للكارد*/
+    /*يخلي 3 صور واحده فقط ع حجم الجواب تتناسب نغير العرض للكارد*/
+
 }
+
+/*sec2*/
+
 
 h2 {
 
     margin-top: 23px;
     text-transform: capitalize;
-    color: var(--prim_color)
+    color: var(--prim_color);
+    text-shadow:  0 0 12px rgb(98, 98, 98);
 }
 
 
 
 .bestsellre {
 
-text-align: center;
+    text-align: center;
 
 
-/* gap: 20px; */    /* تنفع هنا وينفع احدد الرو كمان */  
+    /* gap: 20px; */
+    /* تنفع هنا وينفع احدد الرو كمان */
 }
 
 
@@ -249,51 +367,52 @@ text-align: center;
 
 
 
-gap: 30px;  /*  للتفريق بين العناصر اقدر احطها في الاب الثاني بست سلر , مثل ماسوينا في كاب , كذا ادق*/
+    gap: 30px;
+    /*  للتفريق بين العناصر اقدر احطها في الاب الثاني بست سلر , مثل ماسوينا في كاب , كذا ادق*/
 }
 
 .bestsellre .items {
-   
-text-align: left;
-/*width: calc((100% - 90px) / 4);  تستخدم لتقسيم الاقسان للابناء ع الاب .. مهمه مع الريسبونسف وهذه للصفحة الاساسيه*/
-/* كأن اقل شي للودث250 وفلكس قرو تشغله .. تحديد الودث مع فلكس قرو للابناء تغني عن الريسبونسف اللي سويته تحت للقسم 2 */ 
+
+    text-align: left;
+    width: calc((100% - 90px) / 4);
+/* كأن اقل شي للودث250 وفلكس قرو تشغله .. تحديد الودث مع فلكس قرو للابناء تغني عن الريسبونسف اللي سويته تحت للقسم 2 
 width: 300px;
 flex-grow: 1;
-
-
+*/
 }
 
-.item-imgs img{
-  width: 100%;
-
- display: block;
+.item-imgs img {
+    width: 100%;
+box-shadow:0 0 10px 4px #807f86;
 
 }
 
 .bestsellre .itemcontent {
-    
-margin-top: 24px;
+
+    margin-top: 24px;
 
 }
-.bestsellre h2{
+
+.bestsellre h2 {
 
 
-font-size: 30px;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 2px; /*       المسافة بين الحرروف*/
-margin-bottom: 48px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /*       المسافة بين الحرروف*/
+    margin-bottom: 48px;
 
 
 
 }
 
 .bestsellre h3 {
-font-family: var(--prim_font);
-font-size: 10px;
-font-weight: 500; 
-text-transform: uppercase;
-margin-bottom: 12px;
+    font-family: var(--prim_font);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 
 
 
@@ -302,78 +421,99 @@ margin-bottom: 12px;
 
 
 
-.bestsellre .price{
-font-size: 14px;
-font-weight: 500;
+.bestsellre .price {
+    font-size: 14px;
+    font-weight: 500;
 
 
 
 }
 
-.bestsellre .description{
+.bestsellre .description {
 
 
-color: #807f86;
-width: 80%;  /*  مساحة من الأب نفسه  والنص بحيث لو وصل هنا ينزل*/
-line-height: 22px;   /*  مساحة  بين النصوص واللاسطر مع بعضها يشبه البادنق لكنه بين العنصر نفسه البرقراف الواحد*/
-margin-top: 24px;
-margin-bottom: 34px;
+    color: #807f86;
+    width: 80%;
+    /*  مساحة من الأب نفسه  والنص بحيث لو وصل هنا ينزل*/
+    line-height: 22px;
+    /*  مساحة  بين النصوص واللاسطر مع بعضها يشبه البادنق لكنه بين العنصر نفسه البرقراف الواحد*/
+    margin-top: 24px;
+    margin-bottom: 34px;
 }
+
 .bestsellre .addcard {
 
-padding: 20px 70px;
-background-color: #ffffff;
-border: 1px solid #000;
-letter-spacing: 4px;
-font-size: 10px ;
-font-weight: 600;   /* البايدفلت 400 للودث حق الخط*/
-width: 100%;
+    padding: 20px 70px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+    letter-spacing: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    /* البايدفلت 400 للودث حق الخط*/
+    width: 100%;
+    cursor: pointer;
+    transition-property: background-color;
+    /* احط خصائص الهفر في الكارد لانه هو اللي يصير عليه التغير*/
+    transition-duration: 7s;
+
+    transition-property: color;
+    transition-duration: 1s;
+    box-shadow:0 0 10px 4px #807f86;
+
 
 }
 
+
+.items:hover .addcard {
+    /*  ..  اجعل الهفر لما المس الايتم يجي تلقائيا في الاد كارد التغيرات اللي تصير الخلفيه واللون*/
+
+    background-color: rgb(167, 167, 255);
+    color: floralwhite;
+
+}
 
 
 /*ميديا كويري للقسم الثاني*/
- 
+
 
 @media screen and (min-width:0) and (max-width:450px) {
- 
 
 
-    .bestsellre .items{
-         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
 
-       width: 100%;
+    .bestsellre .items {
+        /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
+
+        width: 100%;
     }
 
-.container {
 
-  width: calc(100% - 100px);
+    .container {
+
+        width: calc(100% - 70px);
+    }
+
+
 }
-
-
-
-    }
 
 @media screen and (min-width:451px) and (max-width:800px) {
- 
 
 
-    .bestsellre .items{
+
+    .bestsellre .items {
 
 
-       width: calc((100% -  30px) / 2);
+        width: calc((100% - 30px) / 2);
 
-         /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
-
-
-}
+        /*يخلي صورة واحده فقط ع الحجم  تتناسب نغير العرض للكارد*/
 
 
-.container {
+    }
 
-  width: calc(100% - 100px);
-}
+
+    .container {
+
+        width: calc(100% - 100px);
+    }
 
 
 
@@ -381,23 +521,86 @@ width: 100%;
 
 @media screen and (min-width:801px) and (max-width:1050px) {
 
-    .bestsellre .items{
+    .bestsellre .items {
 
-      width: calc((100% -  60px) / 3);
+        width: calc((100% - 60px) / 3);
 
-  
+
     }
-  
+
     .container {
 
-  width: calc(100% - 100px);
+        width: calc(100% - 100px);
+    }
+
+
+
 }
 
 
+
+/*sec3*/
+
+/* grid+بوزشن*/
+
+.collection-car2 {
+
+    padding-top: 70px;
+    text-align: center;
+
+
+
 }
 
 
+.car img {
+
+    width: 100%;
+
+box-shadow:0 0 10px 4px #807f86;
  
 
 
- 
+}
+
+/*  >.. الرو الاول بطريقه فلكس  .. غيرنا الرو لتفعيل نظام القريد ف القسم الخامس  بهذه الطريقه يغني عن الريسبونسف*/
+.rowcar {
+    display: grid;
+    /* تفعيل نظام Grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*  أعمدة تلقائية، أقل عرض 250px وتتمدد */
+    gap: 30px;
+    /* مسافة بين العناصر */
+
+}
+
+
+.car{
+
+position: relative;   /* يسمح لعنصر الابن يجي فوقه باضافه بوزشن ابسليوت للعنصر اللي بيجي فوقه*/
+margin-bottom: 50px;
+cursor: pointer;
+}
+
+.car_det{
+
+position: absolute;  /*فوق الكارد طبق هذي*/ 
+background-color: rgba(12, 62, 62, 0.538);
+inset: 0; /*يخلي الخلفيه او العنصر بالكام ل مع خلفيته يمتد ع حجم الكارد*/ 
+display: flex; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+opacity: 0;/*يحفي العنصر نهايي الا لو ضغطت عليه بهوفر يرتبط فيه ويشتغل لانه الهوفر الاوبستي تصير 1*/ 
+transition-property:opacity;  
+transition-duration: 1s;
+}
+
+
+.car:hover .car_det{
+
+opacity: 1;  /*لما اضغط عليه يظهر الابوستي 0 اخفته فوق*/ 
+
+
+}
