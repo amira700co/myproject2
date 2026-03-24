@@ -81,16 +81,18 @@ body {
 }
 
 
-.icon-items .Shopping-ico a {
+.icon-items .Shopp a {
 
 position: relative;
 
+
+
 }
 
-.icon-items .Shopping-ico a::after{    /*افتر+معها كونتنت*/
+.icon-items .Shopp a::after{    /*افتر+معها كونتنت*/
 
 content: '3';
-color: rgb(254, 239, 239);
+color: rgb(45, 40, 40);
 position: absolute;
 top: -23px;
 right: 3px;
